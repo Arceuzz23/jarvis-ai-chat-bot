@@ -16,6 +16,10 @@ class _homeState extends State<home> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    print(width);
+    print(height);
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -24,37 +28,28 @@ class _homeState extends State<home> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.menu),
-                    color: Colors.white,
-                  iconSize: 30,),
-                ],
-              ),
-              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('JARVIS',
                     style: TextStyle(
-                      fontSize: 85,
-                      fontFamily: 'rubik80',
-                      color: Colors.amber,
+                      fontSize: 90,
+                      fontFamily: 'nabla',
+                      color: Colors.amber[300],
                     ),
                   ),
                 ],
               ),
 
-              SizedBox(height: 10,),
+              SizedBox(height: (10/914.2857142857143)*height,),
               Text('What can I help you with today, sir?',
                 style: TextStyle(
                   fontSize: 17,
-
                   fontFamily: 'comfortaa',
                   color: Colors.grey,
                   fontStyle: FontStyle.italic,
                 ),
               ),
-              SizedBox(height: 45,),
+              SizedBox(height: (45/914.2857142857143)*height,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -70,12 +65,12 @@ class _homeState extends State<home> {
                     ),
                   ),
                 ],
-              ),SizedBox(height: 10,),
+              ),SizedBox(height: (7/914.2857142857143)*height,),
 
               feature_box(color: Colors.red.shade600, textDescription: 'A smarter way to stay organised and informed with ChatGpt', textHeading: 'ChatGpt'),
               feature_box(color: Colors.red.shade600, textDescription: 'Get inspired and stay creative with your personal assistant powered by Dall-E', textHeading: 'Dall-E'),
               feature_box(color: Colors.red.shade600, textDescription: 'Voice assistant powered by Dall-E and ChatGpt', textHeading: 'Smart Voice Assistant'),
-              SizedBox(height: 95,),
+              SizedBox(height: (65/914.2857142857143)*height,),
 
 
               GestureDetector(
@@ -93,27 +88,27 @@ class _homeState extends State<home> {
                     child: isListening
                         ? Container(
                         alignment: Alignment.center,
-                        height: 100,
-                        width: 100,
+                        height: (100/914.2857142857143)*height,
+                        width: (100/411.42857142857144)*width,
                         child: Lottie.asset('assets/animations/mic.json',
-                          height: 100,
-                          width: 100,))
+                          height: (100/914.2857142857143)*height,
+                          width: (100/411.42857142857144)*width,))
                         : Container(
+                      height: (100/914.2857142857143)*height,
+                      width: (100/411.42857142857144)*width,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-
                         border: Border.all(
                           color: Colors.black,
-                          width: 12,
+                          width: (12/411.42857142857144)*width,
                         ),
                         color: Color(0xFFFF0A01),
                         borderRadius: BorderRadius.circular(50),
                       ),
-                      height: 100,
-                      width: 100,
+
                         child: Image.asset('assets/icons/mic.png',
-                          height: 35,
-                          width: 35,
+                          height: (35/914.2857142857143)*height,
+                          width: (35/411.42857142857144)*width,
                         ),
                     ),
                   ),
